@@ -7,35 +7,94 @@
     <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #17b67c;
+  color: white;
+}
+#customers tr th,td{
+    inline-size: 1/4;
+    word-break: break-all;
+}
+#customers tr th{
+  text-align: center;
+}
+    </style>
     <script>
         const goBack=()=>{
             window.history.back();
         }
     </script>
 </head>
-<body>
-    <div class="flex justify-center my-3">
-        <button onclick="goBack()" class="btn border-none bg-green-600 btn-sm">Back</button>
+<body class="w-9/12 mx-auto">
+    <div class="  font-bold flex items-center justify-between my-3 uppercase">
+        <h1 class="text-lg ">BLOGS <span class="text-green-700">HERO</span></h1>
+        <div class="flex justify-center">
+            <button onclick="goBack()" class="btn border-none bg-green-600 btn-sm">Back</button>
+        </div>
     </div>
-    <div>
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h2 class="card-title">Card title!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-            </div>
-          </div>
-          <div class="card w-96 bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h2 class="card-title">Card title!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-            </div>
-          </div>
-          <div class="card w-96 bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h2 class="card-title">Card title!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-            </div>
-          </div>
-    </div>
+    <hr>
+   
+    <table id="customers">
+        <thead>
+            <tr>
+                <th class="bg-none"></th>
+                <th>map()</th>
+                <th>forEach()</th>
+                <th>filter()</th>
+                <th>find()</th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>The map() method returns an entirely new array.</td>
+                <td>The forEach() method does not returns a  new array based on the given array.</td>
+                <td>In filter() method a value is passed to the function as this value</td>
+                <td>This method returns undefined if no elements are found.</td>
+              </tr>
+            <tr>
+                <th>2</th>
+                <td>The map() method returns the newly created array according to the provided callback function.</td>
+                <td>The forEach() method returns “undefined“.</td>
+                <td>The filter() method searches  through all the elements</td>
+                <td>The find() method searches through all the child elements only.</td>
+              </tr>
+            <tr>
+                <th>3</th>
+                <td>With the map() method, we can chain other methods like, reduce(),sort() etc.</td>
+                <td>The forEach() method doesn’t return anything hence the method chaining technique cannot be applied here. </td>
+                <td>The filter() method is used to filter all the elements</td>
+                <td>The find() method is used to find all the descendant elements of the selected element.</td>
+              </tr>
+            <tr>
+                <th>4</th>
+                <td>It does not change the original array.</td>
+                <td>It is not executed for empty elements.</td>
+                <td>It does not change the original array.</td>
+                <td>It does not execute the function for empty elements.</td>
+              </tr>
+        </tbody>
+       
+      </table>
 </body>
 </html>
